@@ -152,6 +152,8 @@ export default class App extends Component {
   _renderPOI(station, i, pois) {
     const { location, latitude, longitude, name, type } = station;
     let imgSrc = "https://cdn.iconscout.com/icon/premium/png-256-thumb/school-1751304-1491663.png";
+    let h = "30"
+    let w = "30"
     switch (type) {
       case "school":
         imgSrc = "https://cdn.iconscout.com/icon/premium/png-256-thumb/school-1751304-1491663.png";
@@ -161,6 +163,11 @@ export default class App extends Component {
         break;
       case "stadium":
         imgSrc = "http://icons.iconarchive.com/icons/google/noto-emoji-travel-places/1024/42476-stadium-icon.png";
+        break;
+      case "logo":
+        imgSrc = "../proxy.png";
+        h = "600";
+        w = "600";
         break;
     }
 
@@ -173,7 +180,7 @@ export default class App extends Component {
         captureDoubleClick={false}
       >
         <div className="poi station">
-          <img src={imgSrc} height="30" width="30"></img>
+          <img src={imgSrc} height={h} width={w}></img>
           <span>{name}<br/>{location}</span>
         </div>
       </Marker>
