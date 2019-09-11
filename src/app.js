@@ -257,12 +257,12 @@ export default class App extends Component {
           positionOptions={{enableHighAccuracy: true}}
           trackUserLocation={true}
         />
-        <img style={{width: '20vw', padding: '2vw'}} src="../proxy.png"/>
+        <img style={{width: '10vw', padding: '2vw'}} src="../proxy.png"/>
         <div className="block">
         <TwitterTimelineEmbed
         sourceType="profile"
         screenName="fcschoolsystem"
-        options={{height: 400}}
+        options={{height: 300}}
       />
       </div>
       </MapGL>
