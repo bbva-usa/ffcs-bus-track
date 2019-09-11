@@ -78,6 +78,13 @@ label {
   bottom: 13px;
 }
 
+.station-wrapper {
+  opacity: 0.5;
+}
+.station-wrapper:hover {
+  opacity: 1;
+}
+
 .station:before {
   content: ' ';
   display: inline-block;
