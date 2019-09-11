@@ -82,7 +82,7 @@ label {
 }
 
 .station-wrapper {
-  opacity: 0.5;
+  opacity: 0.6;
 }
 .station-wrapper:hover {
   opacity: 1;
@@ -124,9 +124,10 @@ label {
 
 .station-next:before {
   background: green;
-  width: 10px;
-  height: 10px;
-  border-radius: 10px;
+  width: 16px;
+  height: 16px;
+  border-radius: 16px;
+  opacity: 1;
 }
 
 .station-passed:before {
