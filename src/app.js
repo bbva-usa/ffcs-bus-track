@@ -101,7 +101,7 @@ export default class App extends Component {
   _getDirections(route) {
     let stops = route.coordinates.sort((a,b) => a.time - b.time)
     let coordinates = stops.map(stop => stop.longitude + ',' + stop.latitude).join(';')
-    let url = 'https://api.mapbox.com/directions/v5/mapbox/driving/' + coordinates + '?access_token=' + MAPBOX_TOKEN + '&geometries=geojson'
+    let url = 'https://api.mapbox.com/directions/v5/mapbox/driving/' + coordinates + '?access_token=' + MAPBOX_TOKEN + '&geometries=geojson&overview=full'
 
     fetch(url).then(res => res.json()).then(res => this.setState({directions: res.routes[0].geometry.coordinates}))
   }
