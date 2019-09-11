@@ -112,3 +112,7 @@ label {
   height: 10px;
   border-radius: 10px;
 }
+
+.station-passed:before {
+  background: grey;
+}

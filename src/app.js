@@ -15,7 +15,7 @@ export default class App extends Component {
       longitude: -86.9247124,
       zoom: 13.3,
       bearing: 0,
-      pitch: 50
+      pitch: 25
     },
     interactionState: {},
     settings: {
@@ -77,26 +77,6 @@ export default class App extends Component {
 
     this.setState({route: selectedRoute, morningOnly, afternoonOnly, viewport})
     this._getDirections(selectedRoute)
-
-    // this.setState({selected_bus: selection}
-    // () => { //update selected bus route
-    //   let geojson = 'https://data.calgary.ca/resource/hpnd-riq4.geojson?route_short_name='+this.state.selected_bus
-
-    //   fetch(geojson)
-    //     .then(response => {
-    //         return response.json();
-    //     }).then(data => {
-    //         let turf_center = center(data); //find center of bus route using Turf
-    //         let center_coord = turf_center.geometry.coordinates;
-    //         this.map.flyTo({
-    //          center: center_coord,
-    //          zoom: 12
-    //         });
-    //     });
-
-    //   this.map.getSource('Bus Route').setData(geojson); //update data source through Mapbox setData()
-
-    // });
   }
 
   handleSelectTime(e){
@@ -105,26 +85,6 @@ export default class App extends Component {
     let selectedRoute = this.state.routes.filter(r => r.timeOfDay == e.target.value && r.name == this.state.route.name)[0]
     this.setState({route: selectedRoute})
     this._getDirections(selectedRoute)
-
-    // this.setState({selected_bus: selection}
-    // () => { //update selected bus route
-    //   let geojson = 'https://data.calgary.ca/resource/hpnd-riq4.geojson?route_short_name='+this.state.selected_bus
-
-    //   fetch(geojson)
-    //     .then(response => {
-    //         return response.json();
-    //     }).then(data => {
-    //         let turf_center = center(data); //find center of bus route using Turf
-    //         let center_coord = turf_center.geometry.coordinates;
-    //         this.map.flyTo({
-    //          center: center_coord,
-    //          zoom: 12
-    //         });
-    //     });
-
-    //   this.map.getSource('Bus Route').setData(geojson); //update data source through Mapbox setData()
-
-    // });
   }
 
   _findCenter (arr) {
