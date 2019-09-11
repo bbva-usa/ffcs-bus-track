@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import {render} from 'react-dom';
 import MapGL, { Marker, GeolocateControl } from 'react-map-gl';
 
+import { TwitterTimelineEmbed } from 'react-twitter-embed';
+
 import ControlPanel from './control-panel';
 import PolylineOverlay from './PolylineOverlay';
 import moment from 'moment';
@@ -254,6 +256,13 @@ export default class App extends Component {
           trackUserLocation={true}
         />
         <img style={{width: '20vw', padding: '2vw'}} src="../proxy.png"/>
+        <div className="block">
+        <TwitterTimelineEmbed
+        sourceType="profile"
+        screenName="fcschoolsystem"
+        options={{height: 400}}
+      />
+      </div>
       </MapGL>
     );
   }

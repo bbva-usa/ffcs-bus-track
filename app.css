@@ -7,6 +7,11 @@ body {
   height: 100vh;
 }
 
+.block {
+  position: absolute;
+  bottom: 0;
+  width: 25vw;
+}
 .control-panel {
   position: absolute;
   top: 0;
