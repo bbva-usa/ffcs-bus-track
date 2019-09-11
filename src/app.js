@@ -7,7 +7,7 @@ import PolylineOverlay from './PolylineOverlay';
 import moment from 'moment';
 
 const MAPBOX_TOKEN = 'pk.eyJ1IjoiZmZjcy1idXMtdHJhY2siLCJhIjoiY2swZTBuZTY4MGJxcTNkcXhhcHd0b2ptZCJ9.PapNKyNrTFC8RRxFoltSRg'; // Set your mapbox token here
-const BUS_API = 'https://tnnze9frd0.execute-api.us-east-1.amazonaws.com/dev'
+const BUS_API = 'https://api.dudewheresmybus.com'
 const geolocateStyle = {
   position: 'absolute',
   top: 0,
