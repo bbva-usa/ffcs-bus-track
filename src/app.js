@@ -4,8 +4,6 @@ import MapGL, {Marker} from 'react-map-gl';
 import ControlPanel from './control-panel';
 import PolylineOverlay from './PolylineOverlay';
 
-import busRoute from './1401_fairfield_high_school_morning.json';
-
 const MAPBOX_TOKEN = 'pk.eyJ1IjoiZmZjcy1idXMtdHJhY2siLCJhIjoiY2swZTBuZTY4MGJxcTNkcXhhcHd0b2ptZCJ9.PapNKyNrTFC8RRxFoltSRg'; // Set your mapbox token here
 const BUS_API = 'https://tnnze9frd0.execute-api.us-east-1.amazonaws.com/dev'
 
@@ -40,10 +38,39 @@ export default class App extends Component {
   };
 
   componentDidMount() {
-    let stops = busRoute.coordinates.sort((a,b) => a.time - b.time)
-    fetch(BUS_API + '/routes').then(res => res.json()).then(routes => console.log(routes))
-    this._getDirections(stops)
+    fetch(BUS_API + '/routes').then(res => res.json()).then(routes => {
+      this._getDirections(routes[0])
+      this.setState({routes, route: routes[0]})}
+    )
   };
+
+  handleSelect(e){
+    e.preventDefault();
+
+    let selectedRoute = this.state.routes.filter(r => r.routeId == e.target.value)[0]
+    this.setState({route: selectedRoute})
+    this._getDirections(selectedRoute)
+
+    // this.setState({selected_bus: selection}
+    // () => { //update selected bus route
+    //   let geojson = 'https://data.calgary.ca/resource/hpnd-riq4.geojson?route_short_name='+this.state.selected_bus
+
+    //   fetch(geojson)
+    //     .then(response => {
+    //         return response.json();
+    //     }).then(data => {
+    //         let turf_center = center(data); //find center of bus route using Turf
+    //         let center_coord = turf_center.geometry.coordinates;
+    //         this.map.flyTo({
+    //          center: center_coord,
+    //          zoom: 12
+    //         });
+    //     });
+
+    //   this.map.getSource('Bus Route').setData(geojson); //update data source through Mapbox setData()
+
+    // });
+  }
 
   _onViewportChange = viewport => this.setState({viewport});
 
@@ -71,7 +98,8 @@ export default class App extends Component {
     );
   }
 
-  _getDirections(stops) {
+  _getDirections(route) {
+    let stops = route.coordinates.sort((a,b) => a.time - b.time)
     let coordinates = stops.map(stop => stop.longitude + ',' + stop.latitude).join(';')
     let url = 'https://api.mapbox.com/directions/v5/mapbox/driving/' + coordinates + '?access_token=' + MAPBOX_TOKEN + '&geometries=geojson'
 
@@ -79,7 +107,11 @@ export default class App extends Component {
   }
 
   render() {
-    const {viewport, settings, interactionState, directions} = this.state;
+    const {viewport, settings, interactionState, route, routes, directions} = this.state;
+
+    console.log(routes)
+
+    let options = routes.map(r => <option key={r.routeId} value={r.routeId}>{r.name+" - "+r.timeOfDay}</option>)
 
     return (
       <MapGL
@@ -92,15 +124,12 @@ export default class App extends Component {
         onInteractionStateChange={this._onInteractionStateChange}
         mapboxApiAccessToken={MAPBOX_TOKEN}
       >
+        <select onChange={this.handleSelect.bind(this)} className="custom-select">
+          {options}
+        </select>
         <style>{MARKER_STYLE}</style>
         <PolylineOverlay points={directions}/>
-        {busRoute.coordinates.map(this._renderMarker)}
-        <ControlPanel
-          containerComponent={this.props.containerComponent}
-          settings={settings}
-          interactionState={{...interactionState}}
-          onChange={this._onSettingChange}
-        />
+        {route.coordinates && route.coordinates.map(this._renderMarker)}
       </MapGL>
     );
   }

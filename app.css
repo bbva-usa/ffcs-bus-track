@@ -32,3 +32,20 @@ input {
   margin-left: 20px;
   max-width: 60px;
 }
+
+.custom-select {
+  display: inline-block;
+  position: absolute;
+  height: 5%;
+  width: 80%;
+  padding: 10px;
+  top: 40px;
+  left: 10%;
+  font-size: 2vh;
+  border: none;
+  border-radius: 3px;
+  color: rgb(255, 255, 255);
+  background: rgb(109, 109, 109);
+  outline: none;
+  z-index: 100;
+}
