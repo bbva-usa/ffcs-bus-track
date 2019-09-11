@@ -34,6 +34,7 @@ export default class App extends Component {
     routes: [],
     route: {},
     directions: [],
+    allDirections: [],
     currentTime: moment().format('Hmm')
   };
 
@@ -132,9 +133,12 @@ export default class App extends Component {
   _renderMarker(station, i, routes) {
     const {location, latitude, longitude, time} = station;
 
-    let nextStation = false;
-    if(this.state.currentTime <= parseInt(time) && (i == 0 || this.state.currentTime > parseInt(routes[i-1].time))) {
-      nextStation = true
+    let stationClass = 'station';
+    if (parseInt(time) < this.state.currentTime) {
+      stationClass += ' station-passed'
+    }
+    else if(this.state.currentTime <= parseInt(time) && (i == 0 || this.state.currentTime > parseInt(routes[i-1].time))) {
+      stationClass += ' station-next'
     }
 
     return (
@@ -146,19 +150,35 @@ export default class App extends Component {
         captureDoubleClick={false}
       >
         <div className="station-time">{moment(time, 'Hmm').format('h:mm a')}</div>
-        <div className={nextStation ? 'station station-next' : 'station'}>
+        <div className={stationClass}>
           <span>{location}</span>
         </div>
       </Marker>
     );
   }
 
-  _getDirections(route) {
-    let stops = route.coordinates.sort((a,b) => a.time - b.time)
-    let coordinates = stops.map(stop => stop.longitude + ',' + stop.latitude).join(';')
-    let url = 'https://api.mapbox.com/directions/v5/mapbox/driving/' + coordinates + '?access_token=' + MAPBOX_TOKEN + '&geometries=geojson&overview=full'
+  _onTimeInputChange(e) {
+    let time = moment(e.target.value, 'HH:mm').format('Hmm')
 
-    fetch(url).then(res => res.json()).then(res => this.setState({directions: res.routes[0].geometry.coordinates}))
+    this._getDirections(this.state.route, time)
+    this.setState({currentTime: time})
+  }
+
+  _getDirections(route, time = this.state.currentTime) {
+    let stops = route.coordinates.sort((a,b) => parseInt(a.time) - parseInt(b.time))
+
+    let coordinates = stops.filter(s => s.time >= time).map(stop => stop.longitude + ',' + stop.latitude).join(';')
+    let allCoordinates = stops.map(stop => stop.longitude + ',' + stop.latitude).join(';')
+
+    if (coordinates) {
+      let url = 'https://api.mapbox.com/directions/v5/mapbox/driving/' + coordinates + '?access_token=' + MAPBOX_TOKEN + '&geometries=geojson&overview=full'
+      fetch(url).then(res => res.json()).then(res => this.setState({directions: res.routes[0].geometry.coordinates}))
+    }
+
+    if (allCoordinates) {
+      let allUrl = 'https://api.mapbox.com/directions/v5/mapbox/driving/' + allCoordinates + '?access_token=' + MAPBOX_TOKEN + '&geometries=geojson&overview=full'
+      fetch(allUrl).then(res => res.json()).then(res => this.setState({allDirections: res.routes[0].geometry.coordinates}))
+    }
   }
 
   unique(value, index, self) { 
@@ -166,7 +186,7 @@ export default class App extends Component {
   }
 
   render() {
-    const {viewport, settings, interactionState, route, routes, directions} = this.state;
+    const {viewport, settings, interactionState, route, routes, directions, allDirections} = this.state;
 
     let routeNames = routes.map(r => r.name).filter(this.unique).map(r => <option key={r} value={r}>{r}</option>)
 
@@ -184,11 +204,12 @@ export default class App extends Component {
         <select onChange={this.handleSelectRoute.bind(this)} value={this.state.route.name} className="custom-select custom-select-routes">
           {routeNames}
         </select>
-        <input onChange={e => this.setState({currentTime: moment(e.target.value, 'HH:mm').format('Hmm')})} className="custom-input" type="time" value={moment(this.state.currentTime, 'Hmm').format('HH:mm')}></input>
+        <input onChange={this._onTimeInputChange.bind(this)} className="custom-input" type="time" value={moment(this.state.currentTime, 'Hmm').format('HH:mm')}></input>
         <select onChange={this.handleSelectTime.bind(this)} value={this.state.route.timeOfDay} className="custom-select custom-select-time">
           {this.state.afternoonOnly || <option value="morning">Morning</option>}
           {this.state.morningOnly || <option value="afternoon">Afternoon</option>}
         </select>
+        <PolylineOverlay color='gray' points={allDirections}/>
         <PolylineOverlay points={directions}/>
         {route.coordinates && route.coordinates.map(this._renderMarker.bind(this))}
       </MapGL>
