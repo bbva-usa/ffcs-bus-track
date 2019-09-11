@@ -10,9 +10,8 @@ const MAPBOX_TOKEN = 'pk.eyJ1IjoiZmZjcy1idXMtdHJhY2siLCJhIjoiY2swZTBuZTY4MGJxcTN
 const BUS_API = 'https://tnnze9frd0.execute-api.us-east-1.amazonaws.com/dev'
 const geolocateStyle = {
   position: 'absolute',
-  top: 0,
-  left: 0,
-  margin: 10
+  top: '5vh',
+  right: '3vw'
 };
 
 export default class App extends Component {
@@ -139,7 +138,7 @@ export default class App extends Component {
         captureDrag={false}
         captureDoubleClick={false}
       >
-        <div class='station-wrapper'>
+        <div className='station-wrapper'>
           <div className="station-time">{moment(time, 'Hmm').format('h:mm a')}</div>
           <div className={stationClass}>
             <span>{location}</span>
@@ -247,6 +246,7 @@ export default class App extends Component {
           positionOptions={{enableHighAccuracy: true}}
           trackUserLocation={true}
         />
+        <img src="../proxy.png"/>
       </MapGL>
     );
   }

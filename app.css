@@ -33,7 +33,7 @@ label {
   position: absolute;
   height: 5%;
   padding: 10px;
-  top: 40px;
+  right: 3vw;
   font-size: 2vh;
   border: none;
   border-radius: 3px;
@@ -44,24 +44,22 @@ label {
 }
 
 .custom-select-routes {
-  width: 59%;
-  left: 10%;
+  top: 10vh;
 }
 
 .custom-select-time {
-  width: 20%;
-  left: 71%;
+  top: 17vh;
 }
 
 .custom-input {
   display: inline-block;
   position: absolute;
   height: 5%;
-  left: 10%;
+  top: 24vh;
+  right: 3vw;
   padding-left: 10px;
   padding-right: 10px;
   font-family: system-ui;
-  bottom: 40px;
   font-size: 2vh;
   border: none;
   border-radius: 3px;
