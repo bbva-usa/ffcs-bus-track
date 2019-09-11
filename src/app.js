@@ -11,9 +11,9 @@ const BUS_API = 'https://tnnze9frd0.execute-api.us-east-1.amazonaws.com/dev'
 export default class App extends Component {
   state = {
     viewport: {
-      latitude: 33.477702,
-      longitude: -86.915183,
-      zoom: 11,
+      latitude: 33.4720095,
+      longitude: -86.9247124,
+      zoom: 13.3,
       bearing: 0,
       pitch: 50
     },
@@ -69,7 +69,13 @@ export default class App extends Component {
       selectedRoute = this.state.routes.filter(r => r.name == e.target.value && r.timeOfDay == 'morning')[0]
     }
 
-    this.setState({route: selectedRoute, morningOnly, afternoonOnly})
+    let center = this._findCenter(selectedRoute.coordinates.map(c => [parseFloat(c.longitude), parseFloat(c.latitude)]))
+
+    let viewport = Object.assign({}, this.state.viewport)
+    viewport.latitude = center[1]
+    viewport.longitude = center[0]
+
+    this.setState({route: selectedRoute, morningOnly, afternoonOnly, viewport})
     this._getDirections(selectedRoute)
 
     // this.setState({selected_bus: selection}
@@ -121,6 +127,18 @@ export default class App extends Component {
     // });
   }
 
+  _findCenter (arr) {
+    var minX, maxX, minY, maxY;
+    for (var i = 0; i < arr.length; i++)
+    {
+      minX = (arr[i][0] < minX || minX == null) ? arr[i][0] : minX;
+      maxX = (arr[i][0] > maxX || maxX == null) ? arr[i][0] : maxX;
+      minY = (arr[i][1] < minY || minY == null) ? arr[i][1] : minY;
+      maxY = (arr[i][1] > maxY || maxY == null) ? arr[i][1] : maxY;
+    }
+    return [(minX + maxX) / 2, (minY + maxY) / 2];
+  }
+
   _onViewportChange = viewport => this.setState({viewport});
 
   _onInteractionStateChange = interactionState => this.setState({interactionState});
@@ -167,17 +185,23 @@ export default class App extends Component {
   _getDirections(route, time = this.state.currentTime) {
     let stops = route.coordinates.sort((a,b) => parseInt(a.time) - parseInt(b.time))
 
-    let coordinates = stops.filter(s => s.time >= time).map(stop => stop.longitude + ',' + stop.latitude).join(';')
+    let coordinates = stops.filter(s => parseInt(s.time) >= time).map(stop => stop.longitude + ',' + stop.latitude).join(';')
     let allCoordinates = stops.map(stop => stop.longitude + ',' + stop.latitude).join(';')
 
     if (coordinates) {
       let url = 'https://api.mapbox.com/directions/v5/mapbox/driving/' + coordinates + '?access_token=' + MAPBOX_TOKEN + '&geometries=geojson&overview=full'
       fetch(url).then(res => res.json()).then(res => this.setState({directions: res.routes[0].geometry.coordinates}))
     }
+    else {
+      this.setState({directions: []})
+    }
 
     if (allCoordinates) {
       let allUrl = 'https://api.mapbox.com/directions/v5/mapbox/driving/' + allCoordinates + '?access_token=' + MAPBOX_TOKEN + '&geometries=geojson&overview=full'
       fetch(allUrl).then(res => res.json()).then(res => this.setState({allDirections: res.routes[0].geometry.coordinates}))
+    }
+    else {
+      this.setState({allDirections: []})
     }
   }
 
