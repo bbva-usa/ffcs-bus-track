@@ -34,7 +34,7 @@ export default class App extends Component {
     routes: [],
     route: {},
     directions: [],
-    currentTime: 725
+    currentTime: moment().format('Hmm')
   };
 
   componentDidMount() {
@@ -133,8 +133,6 @@ export default class App extends Component {
     const {location, latitude, longitude, time} = station;
 
     let nextStation = false;
-    console.log(this.state.currentTime, parseInt(time), i)
-    if (i != 0) console.log(parseInt(routes[i-1].time))
     if(this.state.currentTime <= parseInt(time) && (i == 0 || this.state.currentTime > parseInt(routes[i-1].time))) {
       nextStation = true
     }
@@ -186,6 +184,7 @@ export default class App extends Component {
         <select onChange={this.handleSelectRoute.bind(this)} value={this.state.route.name} className="custom-select custom-select-routes">
           {routeNames}
         </select>
+        <input onChange={e => this.setState({currentTime: moment(e.target.value, 'HH:mm').format('Hmm')})} className="custom-input" type="time" value={moment(this.state.currentTime, 'Hmm').format('HH:mm')}></input>
         <select onChange={this.handleSelectTime.bind(this)} value={this.state.route.timeOfDay} className="custom-select custom-select-time">
           {this.state.afternoonOnly || <option value="morning">Morning</option>}
           {this.state.morningOnly || <option value="afternoon">Afternoon</option>}
