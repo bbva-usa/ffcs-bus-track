@@ -21,8 +21,7 @@ export default class App extends Component {
       latitude: 33.4720095,
       longitude: -86.9247124,
       zoom: 13.3,
-      bearing: 0,
-      pitch: 25
+      bearing: 0
     },
     interactionState: {},
     settings: {
@@ -86,6 +85,7 @@ export default class App extends Component {
     let viewport = Object.assign({}, this.state.viewport)
     viewport.latitude = center[1]
     viewport.longitude = center[0]
+    viewport.zoom = 13.3
 
     this.setState({route: selectedRoute, morningOnly, afternoonOnly, viewport})
     this._getDirections(selectedRoute)
@@ -139,9 +139,11 @@ export default class App extends Component {
         captureDrag={false}
         captureDoubleClick={false}
       >
-        <div className="station-time">{moment(time, 'Hmm').format('h:mm a')}</div>
-        <div className={stationClass}>
-          <span>{location}</span>
+        <div class='station-wrapper'>
+          <div className="station-time">{moment(time, 'Hmm').format('h:mm a')}</div>
+          <div className={stationClass}>
+            <span>{location}</span>
+          </div>
         </div>
       </Marker>
     );
