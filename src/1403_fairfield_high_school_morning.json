@@ -1,0 +1,85 @@
+{
+    "routeId" : "14032",
+    "name": "14-03 Fairfield High School",
+    "timeOfDay": "morning",
+    "coordinates": [
+        {
+            "time": "705",
+            "location": "1000 Belwood Cir. & Beacon Dr. (In the driveway across from 1000 Bellwood Cir.)",
+            "latitude": "33.473212",
+            "longitude": "-86.905459"
+        },
+        {
+            "time": "705",
+            "location": "Greenbriar Rd. and Dana Circle (The 700 block side of Greenbriar Rd.)",
+            "latitude": "33.474193",
+            "longitude": "-86.907167"
+        },
+        {
+            "time": "705",
+            "location": "708 Greenbriar Rd",
+            "latitude": "33.473241",
+            "longitude": "-86.90726"
+        },
+        {
+            "time": "705",
+            "location": "776 Bellwood Cir.",
+            "latitude": "33.472177",
+            "longitude": "-86.909115"
+        },
+        {
+            "time": "725",
+            "location": "(Begin High/middle school route) 64th & Ave D",
+            "latitude": "33.474967",
+            "longitude": "-86.913724"
+        },
+        {
+            "time": "727",
+            "location": "64th Street and Court F",
+            "latitude": "33.474785",
+            "longitude": "-86.909993"
+        },
+        {
+            "time": "728",
+            "location": "65th Street and Myron Massey Blvd.",
+            "latitude": "33.473269",
+            "longitude": "-86.909739"
+        },
+        {
+            "time": "730",
+            "location": "6616 Myron Massey Blvd.",
+            "latitude": "33.4768486",
+            "longitude": "-86.9073949"
+        },
+        {
+            "time": "733",
+            "location": "Terrace Court and Avenue D",
+            "latitude": "33.472157",
+            "longitude": "-86.913717"
+        },
+        {
+            "time": "734",
+            "location": "Terrace Court (by the fire hydrate, just before 67th Street on the right)",
+            "latitude": "33.472361",
+            "longitude": "-86.916059"
+        },
+        {
+            "time": "736",
+            "location": "66th Street and Avenue C",
+            "latitude": "33.473546",
+            "longitude": "-86.914745"
+        },
+        {
+            "time": "738",
+            "location": "64th Street and Avenue C (High/Middle school students who have missed bus 14-03 at their stop)",
+            "latitude": "33.474984",
+            "longitude": "-86.915152"
+        },
+        {
+            "time": "745",
+            "location": "Fairfield High Preparatory School",
+            "latitude": "33.4901944",
+            "longitude": "-86.9080936"
+        }
+    ]
+}

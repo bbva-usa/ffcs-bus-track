@@ -1,0 +1,73 @@
+{
+    "routeId" : "14052",
+    "name": "14-05 Fairfield High School",
+    "timeOfDay": "morning",
+    "coordinates": [
+        {
+            "time": "730",
+            "location": "Ave. C and 61st Street (Back side of Robinson)",
+            "latitude": "33.477702",
+            "longitude": "-86.915183"
+        },
+        {
+            "time": "732",
+            "location": "60th Street and Myron Massey Blvd.",
+            "latitude": "33.477154",
+            "longitude": "-86.907182"
+        },
+        {
+            "time": "733",
+            "location": "Avenue C and Jerry D. Coleman",
+            "latitude": "33.475872",
+            "longitude": "-86.915171"
+        },
+        {
+            "time": "733",
+            "location": "Myron Massey Blvd. and 55th Place",
+            "latitude": "33.482706",
+            "longitude": "-86.907096"
+        },
+        {
+            "time": "735",
+            "location": "61st Street and Myron Massey Blvd.",
+            "latitude": "33.476992",
+            "longitude": "-86.907301"
+        },
+        {
+            "time": "735",
+            "location": "Myron Massey Blvd. and 53rd Place",
+            "latitude": "33.4823941313406",
+            "longitude": "-86.9070396559079"
+        },
+        {
+            "time": "737",
+            "location": "516 54th Street (Middle of the block)",
+            "latitude": "33.483697",
+            "longitude": "-86.9109461"
+        },
+        {
+            "time": "741",
+            "location": "54th and Avenue D",
+            "latitude": "33.484081939746",
+            "longitude": "-86.912865390213"
+        },
+        {
+            "time": "743",
+            "location": "5174 Hillside Drive",
+            "latitude": "33.4870465",
+            "longitude": "-86.9117235"
+        },
+        {
+            "time": "744",
+            "location": "721 Court G",
+            "latitude": "33.485056",
+            "longitude": "-86.90534"
+        },
+        {
+            "time": "750",
+            "location": "FAIRFELD HIGH PREPARATORY SCHOOL",
+            "latitude": "33.49124",
+            "longitude": "-86.908237"
+        }
+    ]
+}

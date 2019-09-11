@@ -1,0 +1,67 @@
+{
+    "routeId" : "14034",
+    "name":"14-03 Robinson Elementary",
+    "timeOfDay": "morning",
+    "coordinates": [
+        {
+            "time": "650",
+            "location": "3529 Ave E (next door to St. Paul Church)",
+            "latitude": "33.499682",
+            "longitude": "-86.907251"
+        },
+        {
+            "time": "701",
+            "location": "400 66th ST",
+            "latitude": "33.474042",
+            "longitude": "-86.913319"
+        },
+        {
+            "time": "705",
+            "location": "Greenbriar Road and Dana Circle (The 700 block side of Greenbriar Rd.)",
+            "latitude": "33.474166",
+            "longitude": "-86.907189"
+        },
+        {
+            "time": "708",
+            "location": "1000 Belwood Cir. & Beacon Dr.",
+            "latitude": "33.472801",
+            "longitude":"-86.90547"
+        },
+        {
+            "time": "710",
+            "location": "776 Belwood Cir.",
+            "latitude": "33.471522",
+            "longitude": "-86.908838"
+        },
+        {
+            "time": "715",
+            "location": "6811 Terrace Court",
+            "latitude": "33.469992",
+            "longitude": "-86.914633"
+        },
+        {
+            "time": "720",
+            "location": "67th St. & Terrace Court",
+            "latitude": "33.472805",
+            "longitude": "-86.916052"
+        },
+        {
+            "time": "721",
+            "location": "66th St. & Ave. C",
+            "latitude": "33.473548",
+            "longitude": "-86.914753"
+        },
+        {
+            "time": "722",
+            "location": "6616 Myron Massey Blvd.",
+            "latitude": "33.471999",
+            "longitude": "-86.912091"
+        },
+        {
+            "time": "723",
+            "location": "318 64th St.",
+            "latitude": "33.475308",
+            "longitude": "-86.914173"
+        }
+    ]
+}

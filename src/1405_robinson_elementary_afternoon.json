@@ -1,0 +1,97 @@
+{
+    "routeId": "14053",
+    "name": "14-05 Robinson Elementary",
+    "timeOfDay": "afternoon",
+    "coordinates": [
+        {
+            "time": "1500",
+            "location": "ROBINSON ELEMENTARY",
+            "latitude": "33.4776958",
+            "longitude": "-86.9136822"
+        },
+        {
+            "time": "1509",
+            "location": "Avenue C and Jerry D. Coleman",
+            "latitude": "33.4758683",
+            "longitude": "-86.9131493"
+        },
+        {
+            "time": "1510",
+            "location": "Court E and Jerry D. Coleman",
+            "latitude": "33.4758549",
+            "longitude": "-86.9105448"
+        },
+        {
+            "time": "1511",
+            "location": "66th Street and Court F",
+            "latitude": "33.4727699",
+            "longitude": "-86.9119539"
+        },
+        {
+            "time": "1512",
+            "location": "65th Street and Myron Massey",
+            "latitude": "33.4752098",
+            "longitude": "-86.9085382999999"
+        },
+        {
+            "time": "1514",
+            "location": "6611 Martin Luther King Blvd.",
+            "latitude": "33.4718601",
+            "longitude": "-86.909662"
+        },
+        {
+            "time": "1516",
+            "location": "61st Street and Myron Massey Blvd.",
+            "latitude": "33.4749737",
+            "longitude": "-86.9096948999999"
+        },
+        {
+            "time": "1518",
+            "location": "60th Street and Myron Massey Blvd.",
+            "latitude": "33.47863",
+            "longitude": "-86.90721"
+        },
+        {
+            "time": "1520",
+            "location": "55th Place and Myron Massey Blvd.",
+            "latitude": "33.4827151",
+            "longitude": "-86.9070934"
+        },
+        {
+            "time": "1521",
+            "location": "53rd Place and Myron Massey Blvd.",
+            "latitude": "33.4752098",
+            "longitude": "-86.9085382999999"
+        },
+        {
+            "time": "1522",
+            "location": "Avenue F and Myron Massey Blvd.",
+            "latitude": "33.4835813",
+            "longitude": "-86.9092904"
+        },
+        {
+            "time": "1523",
+            "location": "516 54th Street (Middle of the block)",
+            "latitude": "33.4842922",
+            "longitude": "-86.9106185999999"
+        },
+        {
+            "time": "1524",
+            "location": "54th Street and Avenue E",
+            "latitude": "33.4863932",
+            "longitude": "-86.9113558999999"
+        },
+        {
+            "time": "1526",
+            "location": "52nd Street and Avenue E",
+            "latitude": "33.485433",
+            "longitude": "-86.9114039999999"
+        },
+        {
+            "time": "1529",
+            "location": "56th Street and Avenue D",
+            "latitude": "33.4822107",
+            "longitude": "-86.9128987"
+        }
+    ]
+}
