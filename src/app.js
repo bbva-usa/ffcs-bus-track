@@ -141,7 +141,7 @@ export default class App extends Component {
         captureDoubleClick={false}
       >
         <div className='station-wrapper'>
-          <div className="station-time">{moment(time, 'Hmm').format('h:mm a')}</div>
+          <div className="station-time">{(i + 1) + " - " + moment(time, 'Hmm').format('h:mm a')}</div>
           <div className={stationClass}>
             <span>{location}</span>
           </div>
