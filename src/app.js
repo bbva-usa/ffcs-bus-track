@@ -1,12 +1,19 @@
 import React, {Component} from 'react';
 import {render} from 'react-dom';
-import MapGL, {Marker} from 'react-map-gl';
+import MapGL, { Marker, GeolocateControl } from 'react-map-gl';
+
 import ControlPanel from './control-panel';
 import PolylineOverlay from './PolylineOverlay';
 import moment from 'moment';
 
 const MAPBOX_TOKEN = 'pk.eyJ1IjoiZmZjcy1idXMtdHJhY2siLCJhIjoiY2swZTBuZTY4MGJxcTNkcXhhcHd0b2ptZCJ9.PapNKyNrTFC8RRxFoltSRg'; // Set your mapbox token here
 const BUS_API = 'https://tnnze9frd0.execute-api.us-east-1.amazonaws.com/dev'
+const geolocateStyle = {
+  position: 'absolute',
+  top: 0,
+  left: 0,
+  margin: 10
+};
 
 export default class App extends Component {
   state = {
@@ -42,7 +49,7 @@ export default class App extends Component {
   componentDidMount() {
     fetch(BUS_API + '/routes').then(res => res.json()).then(routes => {
       let sortedRoutes = routes.sort((a,b) => ('' + a.name).localeCompare(b.name))
-      
+
       let firstRoute = sortedRoutes[0]
 
       this._getDirections(firstRoute)
@@ -201,7 +208,7 @@ export default class App extends Component {
     }
   }
 
-  unique(value, index, self) { 
+  unique(value, index, self) {
     return self.indexOf(value) === index;
   }
 
@@ -233,6 +240,11 @@ export default class App extends Component {
         <PolylineOverlay points={directions}/>
         {route.coordinates && route.coordinates.map(this._renderMarker.bind(this))}
         {pointsOfInterest && pointsOfInterest.map(this._renderPOI.bind(this))}
+        <GeolocateControl
+          style={geolocateStyle}
+          positionOptions={{enableHighAccuracy: true}}
+          trackUserLocation={true}
+        />
       </MapGL>
     );
   }
