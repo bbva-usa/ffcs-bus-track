@@ -170,6 +170,11 @@ export default class App extends Component {
         h = "600";
         w = "600";
         break;
+      case "logo-v2":
+        imgSrc = "1270633_1.jpg";
+        h = "600";
+        w = "600";
+        break;
     }
 
     return (
