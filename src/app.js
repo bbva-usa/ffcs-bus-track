@@ -249,7 +249,7 @@ export default class App extends Component {
           {this.state.morningOnly || <option value="afternoon">Afternoon</option>}
         </select>
         <PolylineOverlay color='gray' points={allDirections}/>
-        <PolylineOverlay points={directions}/>
+        <PolylineOverlay color={this.state.route.timeOfDay === 'afternoon' ? 'orange' : 'blue'} points={directions}/>
         {route.coordinates && route.coordinates.map(this._renderMarker.bind(this))}
         {pointsOfInterest && pointsOfInterest.map(this._renderPOI.bind(this))}
         <GeolocateControl
