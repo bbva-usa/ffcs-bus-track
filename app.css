@@ -44,18 +44,18 @@ label {
 }
 
 .custom-select-routes {
-  top: 10vh;
+  top: 12vh;
 }
 
 .custom-select-time {
-  top: 17vh;
+  top: 19vh;
 }
 
 .custom-input {
   display: inline-block;
   position: absolute;
   height: 5%;
-  top: 24vh;
+  top: 5vh;
   right: 3vw;
   padding-left: 10px;
   padding-right: 10px;

@@ -10,7 +10,7 @@ const MAPBOX_TOKEN = 'pk.eyJ1IjoiZmZjcy1idXMtdHJhY2siLCJhIjoiY2swZTBuZTY4MGJxcTN
 const BUS_API = 'https://api.dudewheresmybus.com'
 const geolocateStyle = {
   position: 'absolute',
-  top: '5vh',
+  top: '26vh',
   right: '3vw'
 };
 
@@ -253,7 +253,7 @@ export default class App extends Component {
           positionOptions={{enableHighAccuracy: true}}
           trackUserLocation={true}
         />
-        <img src="../proxy.png"/>
+        <img style={{width: '20vw', padding: '2vw'}} src="../proxy.png"/>
       </MapGL>
     );
   }
