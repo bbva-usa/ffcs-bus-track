@@ -1,0 +1,115 @@
+{
+    "routeId" : "14024",
+    "name": "14-02 Glen Oaks Elementary",
+    "timeOfDay": "morning",
+    "coordinates": [
+        {
+            "time": "645",
+            "location": "7128 Pine Tree Lane",
+            "latitude": "33.465441",
+            "longitude": "-86.916582"
+        },
+        {
+            "time": "647",
+            "location": "317 Englewood Drive",
+            "latitude": "33.462437",
+            "longitude": "-86.922662"
+        },
+        {
+            "time": "648",
+            "location": "7416 Westmoreland Drive",
+            "latitude": "33.463255",
+            "longitude": "-86.921171"
+        },
+        {
+            "time": "650",
+            "location": "7105 Westmoreland Drive",
+            "latitude": "33.465293",
+            "longitude": "-86.917513"
+        },
+        {
+            "time": "653",
+            "location": "509 Crest Drive",
+            "latitude": "33.465683",
+            "longitude": "-86.926807"
+        },
+        {
+            "time": "655",
+            "location": "318 Hillview Drive",
+            "latitude": "33.46668",
+            "longitude": "-86.92363"
+        },
+        {
+            "time": "656",
+            "location": "Seminole Circle @ Mt. Pilgrim Baptist Church",
+            "latitude": "33.468981",
+            "longitude": "-86.924499"
+        },
+        {
+            "time": "657",
+            "location": "Grasselli Road and Seminole Circle (Apts. On Seminole Circle)",
+            "latitude": "33.470251",
+            "longitude": "-86.923968"
+        },
+        {
+            "time": "659",
+            "location": "Grasselli Road and Ridgewood Ave. (Apts. Office)",
+            "latitude": "33.469697",
+            "longitude": "-86.920569"
+        },
+        {
+            "time": "703",
+            "location": "Grasselli Road and Forest Drive (Rainbow Food Mart)",
+            "latitude": "33.470725",
+            "longitude": "-86.926368"
+        },
+        {
+            "time": "705",
+            "location": "6601 Grasselli Road",
+            "latitude": "33.470852",
+            "longitude": "-86.926081"
+        },
+        {
+            "time": "706",
+            "location": "720 Autauga Way",
+            "latitude": "33.474366",
+            "longitude": "-86.928163"
+        },
+        {
+            "time": "707",
+            "location": "549 Seminole Circle",
+            "latitude": "33.474858",
+            "longitude": "-86.924353"
+        },
+        {
+            "time": "709",
+            "location": "541 Seminole Drive",
+            "latitude": "33.471695",
+            "longitude": "-86.923958"
+        },
+        {
+            "time": "710",
+            "location": "500 Seminole Drive",
+            "latitude": "33.47154",
+            "longitude": "-86.925981"
+        },
+        {
+            "time": "711",
+            "location": "6601 Forest Drive",
+            "latitude": "33.472508",
+            "longitude": "-86.925759"
+        },
+        {
+            "time": "712",
+            "location": "Forest Drive and Osceola Circle",
+            "latitude": "33.474615",
+            "longitude": "-86.925579"
+        },
+        {
+            "time": "715",
+            "location": "Glenn Oaks Elementary",
+            "latitude": "33.459898",
+            "longitude": "-86.927923"
+        }
+    ]
+}

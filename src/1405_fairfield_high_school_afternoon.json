@@ -1,0 +1,121 @@
+{
+    "routeId" : "14051",
+    "name": "14-05 Fairfield High School",
+    "timeOfDay": "afternoon",
+    "coordinates": [
+        {
+            "time": "1545",
+            "location": "FAIRFELD HIGH PREPARATORY SCHOOL",
+            "latitude": "33.49124",
+            "longitude": "-86.908237"
+        },
+        {
+            "time": "1546",
+            "location": "5174 Hillside Drive",
+            "latitude": "33.4870465",
+            "longitude": "-86.9117235"
+        },
+        {
+            "time": "1549",
+            "location": "721 Court G",
+            "latitude": "33.485056",
+            "longitude": "-86.90534"
+        },
+        {
+            "time": "1551",
+            "location": "53rd Street and Court H",
+            "latitude": "33.482325",
+            "longitude": "-86.90415"
+        },
+        {
+            "time": "1552",
+            "location": "Myron Massey Blvd. and Court H",
+            "latitude": "33.4828740634527",
+            "longitude": "-86.9040656089782"
+        },
+        {
+            "time": "1553",
+            "location": "Myron Massey Blvd. and 53rd Place",
+            "latitude": "33.4823941313406",
+            "longitude": "-86.9070396559079"
+        },
+        {
+            "time": "1554",
+            "location": "Myron Massey Blvd. and 55th Place",
+            "latitude": "33.482706",
+            "longitude": "-86.907096"
+        },
+        {
+            "time": "1557",
+            "location": "516 54th Street (Middle of the block)",
+            "latitude": "33.483697",
+            "longitude": "-86.9109461"
+        },
+        {
+            "time": "1558",
+            "location": "52nd Street and Avenue D",
+            "latitude": "33.48591",
+            "longitude": "-86.91285"
+        },
+        {
+            "time": "1559",
+            "location": "54th and Avenue D",
+            "latitude": "33.484081939746",
+            "longitude": "-86.912865390213"
+        },
+        {
+            "time": "1600",
+            "location": "55th and Avenue D",
+            "latitude": "33.483183",
+            "longitude": "-86.912886"
+        },
+        {
+            "time": "1604",
+            "location": "56TH Street and Terrace Avenue",
+            "latitude": "33.48222",
+            "longitude": "-86.916438"
+        },
+        {
+            "time": "1606",
+            "location": "60th Street and Terrace Avenue",
+            "latitude": "33.478646",
+            "longitude": "-86.916639"
+        },
+        {
+            "time": "1607",
+            "location": "Avenue C and Jerry D. Coleman",
+            "latitude": "33.475872",
+            "longitude": "-86.915171"
+        },
+        {
+            "time": "1608",
+            "location": "Avenue D and Jerry D. Coleman",
+            "latitude": "33.475858",
+            "longitude": "-86.913704"
+        },
+        {
+            "time": "1609",
+            "location": "Court E and Jerry D. Coleman",
+            "latitude": "33.47585",
+            "longitude": "-86.910545"
+        },
+        {
+            "time": "1610",
+            "location": "Court F and Jerry D. Coleman",
+            "latitude": "33.475614",
+            "longitude": "-86.90945"
+        },
+        {
+            "time": "1612",
+            "location": "61st Street and Myron Massey Blvd.",
+            "latitude": "33.476992",
+            "longitude": "-86.907301"
+        },
+        {
+            "time": "1616",
+            "location": "60th Street and Myron Massey Blvd.",
+            "latitude": "33.477154",
+            "longitude": "-86.907182"
+        }
+    ]
+}

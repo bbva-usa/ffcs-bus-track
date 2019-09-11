@@ -1,0 +1,97 @@
+{
+    "routeId": "14054",
+    "name": "14-05 Robinson Elementary",
+    "timeOfDay": "morning",
+    "coordinates": [
+        {
+            "time": "707",
+            "location": "Myron Massey Blvd and 65th Street",
+            "latitude": "33.4732608",
+            "longitude": "-86.9097360999999"
+        },
+        {
+            "time": "709",
+            "location": "6611 Martin Luther King Blvd.",
+            "latitude": "33.4718601",
+            "longitude": "-86.909662"
+        },
+        {
+            "time": "712",
+            "location": "Court F and Jerry D. Coleman",
+            "latitude": "33.4756233",
+            "longitude": "-86.9094497999999"
+        },
+        {
+            "time": "713",
+            "location": "61st Street and Myron Massey Blvd.",
+            "latitude": "33.4749737",
+            "longitude": "-86.9096948999999"
+        },
+        {
+            "time": "714",
+            "location": "60th Street and Myron Massey Blvd.",
+            "latitude": "33.47863",
+            "longitude": "-86.90721"
+        },
+        {
+            "time": "716",
+            "location": "55th Place and Myron Massey Blvd.",
+            "latitude": "33.4827151",
+            "longitude": "-86.9070934"
+        },
+        {
+            "time": "717",
+            "location": "53rd Place and Myron Massey Blvd.",
+            "latitude": "33.4752098",
+            "longitude": "-86.9085382999999"
+        },
+        {
+            "time": "718",
+            "location": "Avenue F and Myron Massey Blvd.",
+            "latitude": "33.4835813",
+            "longitude": "-86.9092904"
+        },
+        {
+            "time": "720",
+            "location": "516 54th Street (Middle of the Block)",
+            "latitude": "33.4842922",
+            "longitude": "-86.9106185999999"
+        },
+        {
+            "time": "722",
+            "location": "52nd Street and Avenue E",
+            "latitude": "33.485433",
+            "longitude": "-86.9114039999999"
+        },
+        {
+            "time": "724",
+            "location": "54th Street and Avenue D",
+            "latitude": "33.4787023",
+            "longitude": "-86.9136904"
+        },
+        {
+            "time": "726",
+            "location": "56th Street and Avenue D",
+            "latitude": "33.4822107",
+            "longitude": "-86.9128987"
+        },
+        {
+            "time": "727",
+            "location": "56th Street and Terrace Avenue",
+            "latitude": "33.4822222",
+            "longitude": "-86.9164323999999"
+        },
+        {
+            "time": "729",
+            "location": "Jerry D. Coleman and Avenue C",
+            "latitude": "33.4758683",
+            "longitude": "-86.9131493"
+        },
+        {
+            "time": "730",
+            "location": "ROBINSON ELEMENTARY",
+            "latitude": "33.4776958",
+            "longitude": "-86.9136822"
+        }
+    ]
+}

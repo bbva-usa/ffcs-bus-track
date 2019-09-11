@@ -1,0 +1,55 @@
+{
+    "routeId": "14043",
+    "name": "14-04 Fairfield High School",
+    "timeOfDay": "afternoon",
+    "coordinates": [
+        {
+            "time": "1530",
+            "location": "FAIRFIELD HIGH PREPARATORY SCHOOL",
+            "latitude": "33.4912583",
+            "longitude": "-86.9082481"
+        },
+        {
+            "time": "1547",
+            "location": "Forest Drive and Oceola Circle",
+            "latitude": "33.4744454",
+            "longitude": "-86.9256858"
+        },
+        {
+            "time": "1548",
+            "location": "617 Seminole Circle",
+            "latitude": "33.4751923",
+            "longitude": "-86.9263943"
+        },
+        {
+            "time": "1548",
+            "location": "549 Seminole Circle",
+            "latitude": "33.4747144",
+            "longitude": "-86.9243101"
+        },
+        {
+            "time": "1549",
+            "location": "720 Autauga Way (Seminole Circle side)",
+            "latitude": "33.4741871",
+            "longitude": "-86.9281946999999"
+        },
+        {
+            "time": "1550",
+            "location": "Grasselli Road and Forest Drive(Rainbow Food Mart)",
+            "latitude": "33.4705013",
+            "longitude": "-86.9263355"
+        },
+        {
+            "time": "1551",
+            "location": "Grasselli Road and Seminole Circle (The Apts. On Seminole Circle side)",
+            "latitude": "33.4701969",
+            "longitude": "-86.9239676"
+        },
+        {
+            "time": "1552",
+            "location": "Grasselli Road and Ridgewood (The Apt. Office)",
+            "latitude": "33.4692013",
+            "longitude": "-86.919522"
+        }
+    ]
+}

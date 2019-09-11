@@ -1,0 +1,115 @@
+{
+    "routeId" : "14011",
+    "name": "14-01 Fairfield High School",
+    "timeOfDay": "afternoon",
+    "coordinates": [
+        {
+            "time": "1535",
+            "location": "1420 Cambridge Blvd",
+            "latitude": "33.4676734",
+            "longitude": "-86.9309502"
+        },
+        {
+            "time": "1601",
+            "location": "1101 Cambridge Circle",
+            "latitude": "33.466171",
+            "longitude": "-86.930817"
+        },
+        {
+            "time": "1602",
+            "location": "Millstead Road and Post Oak Circle",
+            "latitude": "33.465333",
+            "longitude": "-86.933394"
+        },
+        {
+            "time": "1602",
+            "location": "1491 Cambridge BLVD",
+            "latitude": "33.4662131",
+            "longitude": "-86.9315687"
+        },
+        {
+            "time": "1603",
+            "location": "1184 Red Oak Circle",
+            "latitude": "33.4630312",
+            "longitude": "-86.9285621"
+        },
+        {
+            "time": "1605",
+            "location": "Glen Oaks Elementary School",
+            "latitude": "33.4605361",
+            "longitude": "-86.928143"
+        },
+        {
+            "time": "1607",
+            "location": "Parkridge Ave and Westfield Drive",
+            "latitude": "33.453587",
+            "longitude": "-86.931717"
+        },
+        {
+            "time": "1607",
+            "location": "929 Westfield Drive",
+            "latitude": "33.4527607",
+            "longitude": "-86.9328747"
+        },
+        {
+            "time": "1608",
+            "location": "817 Westfield Drive",
+            "latitude": "33.4550845",
+            "longitude": "-86.9352419"
+        },
+        {
+            "time": "1609",
+            "location": "619 Westfield Drive",
+            "latitude": "33.4579584",
+            "longitude": "-86.9359271"
+        },
+        {
+            "time": "1611",
+            "location": "1000 Hillandale Dr. (Oakland Dr. side)",
+            "latitude": "33.454192",
+            "longitude": "-86.93825"
+        },
+        {
+            "time": "1611",
+            "location": "900 Glen Oaks Drive (Hillandale Dr. Side)",
+            "latitude": "33.456554",
+            "longitude": "-86.938988"
+        },
+        {
+            "time": "1612",
+            "location": "1000 Glen Oaks Drive",
+            "latitude": "33.455898",
+            "longitude": "-86.93759"
+        },
+        {
+            "time": "1612",
+            "location": "800 Glen Crest Dr. (Park Ave. side)",
+            "latitude": "33.4557324",
+            "longitude": "-86.9365814"
+        },
+        {
+            "time": "1613",
+            "location": "846 Park Ave.",
+            "latitude": "33.4544377",
+            "longitude": "-86.9332322"
+        },
+        {
+            "time": "1614",
+            "location": "824 Fairfax Drive",
+            "latitude": "33.4568997",
+            "longitude": "-86.9315799"
+        },
+        {
+            "time": "1615",
+            "location": "407 Glen Crest Drive",
+            "latitude": "33.457612",
+            "longitude": "-86.930678"
+        },
+        {
+            "time": "1616",
+            "location": "345 Glen Crest Drive",
+            "latitude": "33.4576602",
+            "longitude": "-86.9288008"
+        }
+    ]
+}

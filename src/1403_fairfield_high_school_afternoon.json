@@ -1,0 +1,79 @@
+{
+    "routeId" : "14031",
+    "name": "14-03 Fairfield High School",
+    "timeOfDay": "afternoon",
+    "coordinates": [
+        {
+            "time": "1545",
+            "location": "(Begin High/middle school route) 64th & Ave D",
+            "latitude": "33.474967",
+            "longitude": "-86.913724"
+        },
+        {
+            "time": "1545",
+            "location": "Fairfield High Preparatory School",
+            "latitude": "33.4901944",
+            "longitude": "-86.9080936"
+        },
+        {
+            "time": "1547",
+            "location": "64th Street and Court F",
+            "latitude": "33.474785",
+            "longitude": "-86.909993"
+        },
+        {
+            "time": "1548",
+            "location": "65th Street and Myron Massey Blvd.",
+            "latitude": "33.473269",
+            "longitude": "-86.909739"
+        },
+        {
+            "time": "1550",
+            "location": "6616 Myron Massey Blvd.",
+            "latitude": "33.4768486",
+            "longitude": "-86.9073949"
+        },
+        {
+            "time": "1552",
+            "location": "Terrace Court and Avenue D",
+            "latitude": "33.472157",
+            "longitude": "-86.913717"
+        },
+        {
+            "time": "1553",
+            "location": "Terrace Court (by the fire hydrant, just before 67th Street on the right)",
+            "latitude": "33.472361",
+            "longitude": "-86.916059"
+        },
+        {
+            "time": "1555",
+            "location": "66th Street and Avenue C",
+            "latitude": "33.473546",
+            "longitude": "-86.914745"
+        },
+        {
+            "time": "1600",
+            "location": "1000 Bellwood Cir. & Beacon Dr. (In the driveway across from 1000 Bellwood Cir.)",
+            "latitude": "33.473212",
+            "longitude": "-86.905459"
+        },
+        {
+            "time": "1600",
+            "location": "Greenbriar Rd. and Dana Circle (The 700 block side of Greenbriar Rd.)",
+            "latitude": "33.474193",
+            "longitude": "-86.907167"
+        },
+        {
+            "time": "1600",
+            "location": "708 Greenbriar Rd",
+            "latitude": "33.473241",
+            "longitude": "-86.90726"
+        },
+        {
+            "time": "1600",
+            "location": "776 Bellwood Cir.",
+            "latitude": "33.472177",
+            "longitude": "-86.909115"
+        }
+    ]
+}

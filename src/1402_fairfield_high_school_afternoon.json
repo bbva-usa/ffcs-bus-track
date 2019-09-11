@@ -1,0 +1,79 @@
+{
+    "routeId" : "14021",
+    "name": "14-02 Fairfield High School",
+    "timeOfDay": "afternoon",
+    "coordinates": [
+        {
+            "time": "1545",
+            "location": "FAIRFIELD HIGH PREPARATORY SCHOOL",
+            "latitude": "33.491518",
+            "longitude": "-86.90828"
+        },
+        {
+            "time": "1550",
+            "location": "700 Fairfax Drive",
+            "latitude": "33.459726",
+            "longitude": "-86.931724"
+        },
+        {
+            "time": "1551",
+            "location": "644 Glen Park Drive",
+            "latitude": "33.457539",
+            "longitude": "-86.934106"
+        },
+        {
+            "time": "1552",
+            "location": "604 Glen Park Drive",
+            "latitude": "33.459608",
+            "longitude": "-86.934254"
+        },
+        {
+            "time": "1554",
+            "location": "1033 Grand Oaks Road",
+            "latitude": "33.463114",
+            "longitude": "-86.933389"
+        },
+        {
+            "time": "1554",
+            "location": "509 Crest Drive",
+            "latitude": "33.465612",
+            "longitude": "-86.926849"
+        },
+        {
+            "time": "1556",
+            "location": "Chateau Glen Oaks Apts (Facing 440 Apt Building)",
+            "latitude": "33.462434",
+            "longitude": "-86.929751"
+        },
+        {
+            "time": "1556",
+            "location": "Fair Oaks Drive and Earlwood Drive",
+            "latitude": "33.464107",
+            "longitude": "-86.924294"
+        },
+        {
+            "time": "1558",
+            "location": "Westmoreland Drive and Dogwood Lane",
+            "latitude": "33.462749",
+            "longitude": "-86.921218"
+        },
+        {
+            "time": "1601",
+            "location": "Wedgewood Drive and Westmoreland Drive",
+            "latitude": "33.465305",
+            "longitude": "-86.917906"
+        },
+        {
+            "time": "1604",
+            "location": "7316 Pine Tree Lane",
+            "latitude": "33.460491",
+            "longitude": "-86.918648"
+        },
+        {
+            "time": "1605",
+            "location": "7128 Pine Tree Lane",
+            "latitude": "33.465531",
+            "longitude": "-86.916657"
+        }
+    ]
+}

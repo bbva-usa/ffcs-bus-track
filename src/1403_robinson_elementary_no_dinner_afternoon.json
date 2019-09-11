@@ -1,0 +1,67 @@
+{
+    "routeId" : "14035",
+    "name": "14-03 Robinson Elementary (Dinner Not Served)",
+    "timeOfDay": "afternoon",
+    "coordinates": [
+        {
+            "time": "1450",
+            "location": "64th St. & Ave D",
+            "latitude": "33.475205",
+            "longitude": "-86.913743"
+        },
+        {
+            "time": "1455",
+            "location": "3529 Ave E (next door to St. Paul Church)",
+            "latitude": "33.499682",
+            "longitude": "-86.907251"
+        },
+        {
+            "time": "1456",
+            "location": "400 66th ST",
+            "latitude": "33.474042",
+            "longitude": "-86.913319"
+        },
+        {
+            "time": "1458",
+            "location": "66th St. & Ave. C",
+            "latitude": "33.473548",
+            "longitude": "-86.914753"
+        },
+        {
+            "time": "1500",
+            "location": "67th St. & Terrace Court",
+            "latitude": "33.472805",
+            "longitude": "-86.916052"
+        },
+        {
+            "time": "1500",
+            "location": "6616 Myron Massey Blvd.",
+            "latitude": "33.471999",
+            "longitude": "-86.912091"
+        },
+        {
+            "time": "1502",
+            "location": "6811 Terrace Court",
+            "latitude": "33.469992",
+            "longitude": "-86.914633"
+        },
+        {
+            "time": "1555",
+            "location": "776 Belwood Cir.",
+            "latitude": "33.471522",
+            "longitude": "-86.908838"
+        },
+        {
+            "time": "1558",
+            "location": "1000 Belwood Cir. & Beacon Dr.",
+            "latitude": "33.472801",
+            "longitude": "-86.90547"
+        },
+        {
+            "time": "1600",
+            "location": "Greenbriar Road and Dana Circle (The 700 block side of Greenbriar Rd.)",
+            "latitude": "33.474166",
+            "longitude": "-86.907189"
+        }
+    ]
+}
