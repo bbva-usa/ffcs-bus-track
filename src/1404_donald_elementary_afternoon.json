@@ -1,0 +1,109 @@
+{
+    "routeId": "14041",
+    "name": "1404 Donald Elementary",
+    "timeOfDay": "afternoon",
+    "coordinates": [
+        {
+            "time": "1500",
+            "location": "C. J. Donald Elementary School",
+            "latitude": "33.4901386",
+            "longitude": "-86.9056655999999"
+        },
+        {
+            "time": "1501",
+            "location": "660 Lloyd Nolan Parkway",
+            "latitude": "33.4879406",
+            "longitude": "-86.9059494"
+        },
+        {
+            "time": "1501",
+            "location": "526 Lloyd Nolan Parkway",
+            "latitude": "33.4891888",
+            "longitude": "-86.9092003"
+        },
+        {
+            "time": "1503",
+            "location": "4912 Court G",
+            "latitude": "33.4844835",
+            "longitude": "-86.9059984"
+        },
+        {
+            "time": "1504",
+            "location": "Farrell Ave. and Oak Place",
+            "latitude": "33.4880848",
+            "longitude": "-86.9103203999999"
+        },
+        {
+            "time": "1505",
+            "location": "5174 Hillside Drive",
+            "latitude": "33.4868579",
+            "longitude": "-86.9117931"
+        },
+        {
+            "time": "1505",
+            "location": "40th Street and 40th Way",
+            "latitude": "33.4941244",
+            "longitude": "-86.9062257"
+        },
+        {
+            "time": "1506",
+            "location": "Valley Road and Hillside Drive",
+            "latitude": "33.4881857",
+            "longitude": "-86.9144294"
+        },
+        {
+            "time": "1507",
+            "location": "53rd Street and Ave D (Pleasant Grove Bapt. parking)",
+            "latitude": "33.4849972",
+            "longitude": "-86.9128618"
+        },
+        {
+            "time": "1507",
+            "location": "40TH Street and Avenue F",
+            "latitude": "33.4944851",
+            "longitude": "-86.9092407999999"
+        },
+        {
+            "time": "1508",
+            "location": "512 53rd Street",
+            "latitude": "33.4851708",
+            "longitude": "-86.9107751999999"
+        },
+        {
+            "time": "1510",
+            "location": "Debardeleben Way and Lloyd Noland Pkwy",
+            "latitude": "33.4903702",
+            "longitude": "-86.9115482999999"
+        },
+        {
+            "time": "1513",
+            "location": "Gary Avenue and 43rd Street",
+            "latitude": "33.4936947",
+            "longitude": "-86.9133753999999"
+        },
+        {
+            "time": "1516",
+            "location": "Gary Avenue and 51st Street",
+            "latitude": "33.491939",
+            "longitude": "-86.914335"
+        },
+        {
+            "time": "1520",
+            "location": "C. J. Donald Elementary School",
+            "latitude": "33.4901386",
+            "longitude": "-86.9056655999999"
+        },
+        {
+            "time": "1527",
+            "location": "Myron Massey Blvd. and 55th Place",
+            "latitude": "33.4827151",
+            "longitude": "-86.9070934"
+        },
+        {
+            "time": "1529",
+            "location": "Myron Massey Blvd. and Ave. F",
+            "latitude": "33.4835813",
+            "longitude": "-86.9092904"
+        }
+    ]
+}

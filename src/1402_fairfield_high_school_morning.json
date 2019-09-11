@@ -1,8 +1,8 @@
 {
-    "routeId" : 14022,
+    "routeId" : "14022",
     "name": "14-02 Fairfield High School",
     "timeOfDay": "morning",
-    "coords": [
+    "coordinates": [
         {
             "time": "715",
             "location": "700 Fairfax Drive",
