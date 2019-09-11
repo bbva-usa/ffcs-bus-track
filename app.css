@@ -37,10 +37,8 @@ input {
   display: inline-block;
   position: absolute;
   height: 5%;
-  width: 80%;
   padding: 10px;
   top: 40px;
-  left: 10%;
   font-size: 2vh;
   border: none;
   border-radius: 3px;
@@ -48,4 +46,14 @@ input {
   background: rgb(109, 109, 109);
   outline: none;
   z-index: 100;
+}
+
+.custom-select-routes {
+  width: 59%;
+  left: 10%;
+}
+
+.custom-select-time {
+  width: 20%;
+  left: 71%;
 }

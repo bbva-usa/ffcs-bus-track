@@ -39,15 +39,63 @@ export default class App extends Component {
 
   componentDidMount() {
     fetch(BUS_API + '/routes').then(res => res.json()).then(routes => {
-      this._getDirections(routes[0])
-      this.setState({routes, route: routes[0]})}
+      let sortedRoutes = routes.sort((a,b) => ('' + a.name).localeCompare(b.name))
+      
+      let firstRoute = sortedRoutes[0]
+
+      this._getDirections(firstRoute)
+      this.setState({routes: sortedRoutes, route: firstRoute})}
     )
   };
 
-  handleSelect(e){
+  handleSelectRoute(e){
     e.preventDefault();
 
-    let selectedRoute = this.state.routes.filter(r => r.routeId == e.target.value)[0]
+    let selectedRoute, morningOnly, afternoonOnly;
+    if (!e.target.value.startsWith('14-03 Robinson Elementary')) {
+      morningOnly = false;
+      afternoonOnly = false;
+      selectedRoute = this.state.routes.filter(r => r.name == e.target.value && r.timeOfDay == this.state.route.timeOfDay)[0]
+    }
+    else if (e.target.value.includes('Dinner')) {
+      morningOnly = false;
+      afternoonOnly = true;
+      selectedRoute = this.state.routes.filter(r => r.name == e.target.value && r.timeOfDay == 'afternoon')[0]
+    }
+    else {
+      morningOnly = true;
+      afternoonOnly = false;
+      selectedRoute = this.state.routes.filter(r => r.name == e.target.value && r.timeOfDay == 'morning')[0]
+    }
+
+    this.setState({route: selectedRoute, morningOnly, afternoonOnly})
+    this._getDirections(selectedRoute)
+
+    // this.setState({selected_bus: selection}
+    // () => { //update selected bus route
+    //   let geojson = 'https://data.calgary.ca/resource/hpnd-riq4.geojson?route_short_name='+this.state.selected_bus
+
+    //   fetch(geojson)
+    //     .then(response => {
+    //         return response.json();
+    //     }).then(data => {
+    //         let turf_center = center(data); //find center of bus route using Turf
+    //         let center_coord = turf_center.geometry.coordinates;
+    //         this.map.flyTo({
+    //          center: center_coord,
+    //          zoom: 12
+    //         });
+    //     });
+
+    //   this.map.getSource('Bus Route').setData(geojson); //update data source through Mapbox setData()
+
+    // });
+  }
+
+  handleSelectTime(e){
+    e.preventDefault();
+
+    let selectedRoute = this.state.routes.filter(r => r.timeOfDay == e.target.value && r.name == this.state.route.name)[0]
     this.setState({route: selectedRoute})
     this._getDirections(selectedRoute)
 
@@ -106,12 +154,14 @@ export default class App extends Component {
     fetch(url).then(res => res.json()).then(res => this.setState({directions: res.routes[0].geometry.coordinates}))
   }
 
+  unique(value, index, self) { 
+    return self.indexOf(value) === index;
+  }
+
   render() {
     const {viewport, settings, interactionState, route, routes, directions} = this.state;
 
-    console.log(routes)
-
-    let options = routes.map(r => <option key={r.routeId} value={r.routeId}>{r.name+" - "+r.timeOfDay}</option>)
+    let routeNames = routes.map(r => r.name).filter(this.unique).map(r => <option key={r} value={r}>{r}</option>)
 
     return (
       <MapGL
@@ -124,8 +174,12 @@ export default class App extends Component {
         onInteractionStateChange={this._onInteractionStateChange}
         mapboxApiAccessToken={MAPBOX_TOKEN}
       >
-        <select onChange={this.handleSelect.bind(this)} className="custom-select">
-          {options}
+        <select onChange={this.handleSelectRoute.bind(this)} value={this.state.route.name} className="custom-select custom-select-routes">
+          {routeNames}
+        </select>
+        <select onChange={this.handleSelectTime.bind(this)} value={this.state.route.timeOfDay} className="custom-select custom-select-time">
+          {this.state.afternoonOnly || <option value="morning">Morning</option>}
+          {this.state.morningOnly || <option value="afternoon">Afternoon</option>}
         </select>
         <style>{MARKER_STYLE}</style>
         <PolylineOverlay points={directions}/>
