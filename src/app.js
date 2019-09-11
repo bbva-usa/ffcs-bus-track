@@ -165,7 +165,7 @@ export default class App extends Component {
         imgSrc = "http://icons.iconarchive.com/icons/google/noto-emoji-travel-places/1024/42476-stadium-icon.png";
         break;
       case "logo":
-        imgSrc = "../proxy.png";
+        imgSrc = "proxy.png";
         h = "600";
         w = "600";
         break;
