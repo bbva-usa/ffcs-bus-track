@@ -181,7 +181,9 @@ export default class App extends Component {
         captureDoubleClick={false}
       >
         <div className="poi station">
-          <img src={imgSrc} height={h} width={w}></img>
+          <a href="http://team3-bus-app.s3-website-us-east-1.amazonaws.com">
+            <img src={imgSrc} height={h} width={w}></img>
+          </a>
           <span>{name}<br/>{location}</span>
         </div>
       </Marker>
