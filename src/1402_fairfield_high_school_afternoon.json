@@ -2,7 +2,7 @@
     "routeId" : "14021",
     "name": "14-02 Fairfield High School",
     "timeOfDay": "afternoon",
-    "coords": [
+    "coordinates": [
         {
             "time": "1545",
             "location": "FAIRFIELD HIGH PREPARATORY SCHOOL",
