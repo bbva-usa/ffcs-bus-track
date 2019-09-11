@@ -1,0 +1,114 @@
+body {
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+}
+#map {
+  width: 100vw;
+  height: 100vh;
+}
+
+.control-panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  max-width: 320px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  padding: 12px 24px;
+  margin: 20px;
+  font-size: 13px;
+  line-height: 2;
+  color: #6b6b76;
+  text-transform: uppercase;
+  outline: none;
+}
+
+label {
+  display: inline-block;
+  width: 160px;
+}
+
+.custom-select {
+  display: inline-block;
+  position: absolute;
+  height: 5%;
+  padding: 10px;
+  top: 40px;
+  font-size: 2vh;
+  border: none;
+  border-radius: 3px;
+  color: rgb(255, 255, 255);
+  background: rgb(109, 109, 109);
+  outline: none;
+  z-index: 100;
+}
+
+.custom-select-routes {
+  width: 59%;
+  left: 10%;
+}
+
+.custom-select-time {
+  width: 20%;
+  left: 71%;
+}
+
+.custom-input {
+  display: inline-block;
+  position: absolute;
+  height: 5%;
+  width: 20%;
+  left: 10%;
+  padding: 10px;
+  bottom: 40px;
+  font-size: 2vh;
+  border: none;
+  border-radius: 3px;
+  color: rgb(255, 255, 255);
+  background: rgb(109, 109, 109);
+  outline: none;
+  z-index: 100;
+}
+
+.station-time {
+  color: white;
+  position: relative;
+  right: 24px;
+  bottom: 13px;
+}
+
+.station:before {
+  content: ' ';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: red;
+  border-radius: 8px;
+  margin: 0 8px;
+}
+.station {
+  border-radius: 20px;
+  padding-right: 12px;
+  margin: -12px;
+  color: transparent;
+  line-height: 24px;
+  font-size: 13px;
+  white-space: nowrap;
+}
+.station span {
+  display: none;
+}
+.station:hover {
+  background: rgba(0,0,0,0.8);
+  color: #fff;
+}
+.station:hover span {
+  display: inline-block;
+}
+
+.station-next:before {
+  background: green;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+}
