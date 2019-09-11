@@ -57,9 +57,10 @@ label {
   display: inline-block;
   position: absolute;
   height: 5%;
-  width: 20%;
   left: 10%;
-  padding: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: system-ui;
   bottom: 40px;
   font-size: 2vh;
   border: none;
