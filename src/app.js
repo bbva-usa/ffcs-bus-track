@@ -33,6 +33,7 @@ export default class App extends Component {
     },
     routes: [],
     route: {},
+    pointsOfInterest: [],
     directions: [],
     allDirections: [],
     currentTime: moment().format('Hmm')
@@ -47,6 +48,10 @@ export default class App extends Component {
       this._getDirections(firstRoute)
       this.setState({routes: sortedRoutes, route: firstRoute})}
     )
+
+    fetch(BUS_API + '/pointsOfInterest').then(res => res.json()).then(pois => {
+      this.setState({ pointsOfInterest: pois })
+    })
   };
 
   handleSelectRoute(e){
@@ -135,6 +140,37 @@ export default class App extends Component {
     );
   }
 
+  _renderPOI(station, i, pois) {
+    const { location, latitude, longitude, name, type } = station;
+    let imgSrc = "https://cdn.iconscout.com/icon/premium/png-256-thumb/school-1751304-1491663.png";
+    switch (type) {
+      case "school":
+        imgSrc = "https://cdn.iconscout.com/icon/premium/png-256-thumb/school-1751304-1491663.png";
+        break;
+      case "library":
+        imgSrc = "https://png.pngtree.com/svg/20161017/library_38447.png";
+        break;
+      case "stadium":
+        imgSrc = "http://icons.iconarchive.com/icons/google/noto-emoji-travel-places/1024/42476-stadium-icon.png";
+        break;
+    }
+
+    return (
+      <Marker
+        key={i}
+        longitude={parseFloat(longitude)}
+        latitude={parseFloat(latitude)}
+        captureDrag={false}
+        captureDoubleClick={false}
+      >
+        <div className="poi station">
+          <img src={imgSrc} height="30" width="30"></img>
+          <span>{name}<br/>{location}</span>
+        </div>
+      </Marker>
+    );
+  }
+
   _onTimeInputChange(e) {
     let time = moment(e.target.value, 'HH:mm').format('Hmm')
 
@@ -170,7 +206,7 @@ export default class App extends Component {
   }
 
   render() {
-    const {viewport, settings, interactionState, route, routes, directions, allDirections} = this.state;
+    const {viewport, settings, interactionState, route, routes, directions, allDirections, pointsOfInterest} = this.state;
 
     let routeNames = routes.map(r => r.name).filter(this.unique).map(r => <option key={r} value={r}>{r}</option>)
 
@@ -196,6 +232,7 @@ export default class App extends Component {
         <PolylineOverlay color='gray' points={allDirections}/>
         <PolylineOverlay points={directions}/>
         {route.coordinates && route.coordinates.map(this._renderMarker.bind(this))}
+        {pointsOfInterest && pointsOfInterest.map(this._renderPOI.bind(this))}
       </MapGL>
     );
   }

@@ -87,6 +87,11 @@ label {
   border-radius: 8px;
   margin: 0 8px;
 }
+
+.poi:before {
+  background-color: transparent;
+}
+
 .station {
   border-radius: 20px;
   padding-right: 12px;
