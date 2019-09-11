@@ -4,9 +4,10 @@ import MapGL, {Marker} from 'react-map-gl';
 import ControlPanel from './control-panel';
 import PolylineOverlay from './PolylineOverlay';
 
-import busRoute from './1401_fairfield_high_school.json';
+import busRoute from './1401_fairfield_high_school_morning.json';
 
 const MAPBOX_TOKEN = 'pk.eyJ1IjoiZmZjcy1idXMtdHJhY2siLCJhIjoiY2swZTBuZTY4MGJxcTNkcXhhcHd0b2ptZCJ9.PapNKyNrTFC8RRxFoltSRg'; // Set your mapbox token here
+const BUS_API = 'https://tnnze9frd0.execute-api.us-east-1.amazonaws.com/dev'
 
 import MARKER_STYLE from './marker-style';
 
@@ -33,13 +34,15 @@ export default class App extends Component {
       minPitch: 0,
       maxPitch: 85
     },
-    route: []
+    routes: [],
+    route: {},
+    directions: []
   };
 
   componentDidMount() {
-    let stops = busRoute.morning.sort((a,b) => a.time - b.time)
-    console.log(stops)
-    this._getRoute(stops)
+    let stops = busRoute.coordinates.sort((a,b) => a.time - b.time)
+    fetch(BUS_API + '/routes').then(res => res.json()).then(routes => console.log(routes))
+    this._getDirections(stops)
   };
 
   _onViewportChange = viewport => this.setState({viewport});
@@ -56,8 +59,8 @@ export default class App extends Component {
     return (
       <Marker
         key={i}
-        longitude={longitude}
-        latitude={latitude}
+        longitude={parseFloat(longitude)}
+        latitude={parseFloat(latitude)}
         captureDrag={false}
         captureDoubleClick={false}
       >
@@ -68,15 +71,15 @@ export default class App extends Component {
     );
   }
 
-  _getRoute(stops) {
+  _getDirections(stops) {
     let coordinates = stops.map(stop => stop.longitude + ',' + stop.latitude).join(';')
     let url = 'https://api.mapbox.com/directions/v5/mapbox/driving/' + coordinates + '?access_token=' + MAPBOX_TOKEN + '&geometries=geojson'
 
-    fetch(url).then(res => res.json()).then(res => this.setState({route: res.routes[0].geometry.coordinates}))
+    fetch(url).then(res => res.json()).then(res => this.setState({directions: res.routes[0].geometry.coordinates}))
   }
 
   render() {
-    const {viewport, settings, interactionState, route} = this.state;
+    const {viewport, settings, interactionState, directions} = this.state;
 
     return (
       <MapGL
@@ -90,8 +93,8 @@ export default class App extends Component {
         mapboxApiAccessToken={MAPBOX_TOKEN}
       >
         <style>{MARKER_STYLE}</style>
-        <PolylineOverlay points={route}/>
-        {busRoute.morning.map(this._renderMarker)}
+        <PolylineOverlay points={directions}/>
+        {busRoute.coordinates.map(this._renderMarker)}
         <ControlPanel
           containerComponent={this.props.containerComponent}
           settings={settings}
