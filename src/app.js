@@ -3,11 +3,10 @@ import {render} from 'react-dom';
 import MapGL, {Marker} from 'react-map-gl';
 import ControlPanel from './control-panel';
 import PolylineOverlay from './PolylineOverlay';
+import moment from 'moment';
 
 const MAPBOX_TOKEN = 'pk.eyJ1IjoiZmZjcy1idXMtdHJhY2siLCJhIjoiY2swZTBuZTY4MGJxcTNkcXhhcHd0b2ptZCJ9.PapNKyNrTFC8RRxFoltSRg'; // Set your mapbox token here
 const BUS_API = 'https://tnnze9frd0.execute-api.us-east-1.amazonaws.com/dev'
-
-import MARKER_STYLE from './marker-style';
 
 export default class App extends Component {
   state = {
@@ -34,7 +33,8 @@ export default class App extends Component {
     },
     routes: [],
     route: {},
-    directions: []
+    directions: [],
+    currentTime: 725
   };
 
   componentDidMount() {
@@ -129,8 +129,16 @@ export default class App extends Component {
       settings: {...this.state.settings, [name]: value}
     });
 
-  _renderMarker(station, i) {
+  _renderMarker(station, i, routes) {
     const {location, latitude, longitude, time} = station;
+
+    let nextStation = false;
+    console.log(this.state.currentTime, parseInt(time), i)
+    if (i != 0) console.log(parseInt(routes[i-1].time))
+    if(this.state.currentTime <= parseInt(time) && (i == 0 || this.state.currentTime > parseInt(routes[i-1].time))) {
+      nextStation = true
+    }
+
     return (
       <Marker
         key={i}
@@ -139,8 +147,9 @@ export default class App extends Component {
         captureDrag={false}
         captureDoubleClick={false}
       >
-        <div className="station">
-          <span>{location + ' - ' + time}</span>
+        <div className="station-time">{moment(time, 'Hmm').format('h:mm a')}</div>
+        <div className={nextStation ? 'station station-next' : 'station'}>
+          <span>{location}</span>
         </div>
       </Marker>
     );
@@ -181,9 +190,8 @@ export default class App extends Component {
           {this.state.afternoonOnly || <option value="morning">Morning</option>}
           {this.state.morningOnly || <option value="afternoon">Afternoon</option>}
         </select>
-        <style>{MARKER_STYLE}</style>
         <PolylineOverlay points={directions}/>
-        {route.coordinates && route.coordinates.map(this._renderMarker)}
+        {route.coordinates && route.coordinates.map(this._renderMarker.bind(this))}
       </MapGL>
     );
   }
